@@ -1,5 +1,5 @@
 <template>
-  <div :class="$attrs.class" class="base-list-container">
+  <div class="base-list-container">
     <ul v-if="list.length" class="base-list" :class="classList">
       <li class="base-list__item" v-for="item of list" :key="getKey(item)">
         <slot v-bind="item" />

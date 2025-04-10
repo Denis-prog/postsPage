@@ -35,5 +35,25 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import './preloader.scss';
+.preloader-wrapper {
+  display: flex;
+
+  &_has_overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($color: #797676, $alpha: 0.5);
+    z-index: 6000;
+  }
+}
+
+.preloader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  overflow: hidden;
+}
 </style>

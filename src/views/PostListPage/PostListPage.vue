@@ -3,7 +3,8 @@
     <div class="post-list-page__search">
       <BaseSearchInput v-model="postStore.searchValue" placeholder="filter by author" />
     </div>
-    <BaseList class-list="post-list-page__grid" :list="postStore.filteredList" #default="props">
+    <BaseList class-list="post-list-page__grid-data" class="post-list-page__grid" :list="postStore.filteredList"
+      #default="props">
       <Post v-bind="props" />
     </BaseList>
   </section>
@@ -38,7 +39,11 @@ loadData()
     margin-bottom: 30px;
   }
 
-  :deep(.post-list-page__grid) {
+  &__grid {
+    margin-bottom: 20px;
+  }
+
+  :deep(.post-list-page__grid-data) {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
